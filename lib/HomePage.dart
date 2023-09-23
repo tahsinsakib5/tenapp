@@ -12,13 +12,14 @@ class HomePage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
                   children: [
+                    SizedBox(height: 80),
                     MainHome(),
                     SizedBox(
                       height: 20,
@@ -26,17 +27,14 @@ class HomePage extends StatelessWidget {
                     MainHome()
                   ],
                 ),
-                Container(
-                  height: 600,
-                  child: Column(
-                    children: [
-                      MainHome(),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      MainHome(),
-                    ],
-                  ),
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    MainHome(),
+                    SizedBox(height: 20),
+                    MainHome(),
+                    SizedBox(height: 80),
+                  ],
                 )
               ],
             ),
