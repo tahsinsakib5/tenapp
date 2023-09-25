@@ -6,10 +6,11 @@ import 'package:tenapp/HomePage.dart';
 import 'package:tenapp/quiz.dart';
 
 void main() {
-  // WidgetsFlutterBinding.ensureInitialized();
+  //   WidgetsFlutterBinding.ensureInitialized();
   // SystemChrome.setPreferredOrientations([
   //   DeviceOrientation.landscapeLeft,
-  //   DeviceOrientation.landscapeRight
+  //   DeviceOrientation.landscapeRight,
+    
   // ]);
   runApp(const MyApp());
 }

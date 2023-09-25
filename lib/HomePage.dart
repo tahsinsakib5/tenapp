@@ -10,61 +10,96 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body:Container(
-        width: double.infinity,
-        color: Color.fromARGB(255, 144, 228, 243),
+    return SafeArea(
+      child: Scaffold(
+       
+          //  bottomNavigationBar: BottomNavigationBar(items: [BottomNavigationBarItem(icon:Icon(Icons.home),label:"home",),BottomNavigationBarItem(icon: Icon(Icons.expand_more),label: "Exam",),BottomNavigationBarItem(icon: Icon(Icons.point_of_sale))]),
+        body:Container(
+          width: double.infinity,
+          color: Color.fromARGB(255, 144, 228, 243),
+    
+                
 
-             
-          child: Column(
-            children: [
-              SizedBox(
-                height: 50,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                 
+    
+                 child: Column(
                   children: [
-                   
-                       
-                      Container(
-                        height: 420,
-                        child: Column(
+                    
+                     SizedBox(
+                      height: 60,
+                     ),
+                    Center(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          MainHome(),
                           SizedBox(
-                            height: 20,
+                            height: 60,
                           ),
-                          MainHome()
+                          Column(
+                           crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                            
+                              Text("well come to online",style: TextStyle(fontSize: 20),),
+                              Text("exam",style: TextStyle(fontSize: 60),)
+                            ],
+                          ),
+                          Container(
+                            height: 160,
+                            child: Image.asset("assets/exam.png"),
+                          )
                         ],
-                                        ),
                       ),
-                    
-                   
-                    
+                    ),
+    
+                    Spacer(),
                     Container(
-                      height: 600,
-                      child: Column(
-                        children: [
-                          MainHome(),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          MainHome(),
-
-                          
-                        ],
+                      height: 500,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(topLeft:Radius.circular(20),topRight: Radius.circular(20))
                       ),
-                    )
-                  ],
-                ),
-              ),
+                       
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 40),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            SizedBox(
+                              height: 40,
+                            ),
+                            Column(
+                              children: [
+                                MainHome(),
+                                SizedBox(
+                                  height: 30,
+                                ),
+                                MainHome(),
+                              ],
+                            ),
+                        
+                            Column(
+                              children: [
+                                SizedBox(
+                                  height: 30,
+                                ),
+                                MainHome(),
+                                SizedBox(
+                                  height: 30,
+                                ),
+                                MainHome()
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
 
-              Text("test kortasi"),
-            ],
-          ),
+                         
+                    ),
+                   
+                  ],
+                 ),
           
+              ),
       ),
     );
   }
