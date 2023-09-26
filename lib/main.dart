@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:tenapp/HomePage.dart';
+import 'package:tenapp/menuage.dart';
 import 'package:tenapp/quiz.dart';
 
 void main() {
@@ -22,7 +23,7 @@ void main() {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:HomePage(),
+      home:menuPage(),
     );
   }
 }
